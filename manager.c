@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "manager.h"
 
 int createProduct2(Product2 *p){
@@ -85,18 +86,18 @@ int selectDataNo2(Product2 *p, int count){
 	
 void saveData(Product2 p[], int count){
 	FILE* fp;
-	fp= open("product.txt","wt");
+	fp= fopen("product.txt","wt");
 	for(int i=0; i<count; i++){
-		fprinf(fp,"%s %d %d %d %d %d\n", p[i].name,p[i].weight,p[i].price,p[i].tenprice,p[i].stargr);
+		fprintf(fp,"%s %d %d %d %d\n", p[i].name,p[i].weight,p[i].price,p[i].tenprice,p[i].stargr);
 		}
-	}
 	fclose(fp);
-	printf("저장됨!")
+	printf("저장됨!");
 }
 
-void loadData(Product2 p[]){
+int loadData(Product2 p[]){
+	int count=0;
 	FILE*fp;
-	fp=open("product.txt","rt");
+	fp=fopen("product.txt","rt");
 	if(fp==NULL){
 		printf("=>파일 없음\n");
 	return 0;	
