@@ -83,3 +83,33 @@ int selectDataNo2(Product2 *p, int count){
 }
 
 	
+void saveData(Product p[], int count){
+	FILE* fp;
+	fp= open("product.txt","wt");
+	for(int i=0; i<count; i++){
+		fprinf(fp,"%s %d %d %d %d %d\n", p[i].name,p[i].weight,p[i].price,p[i].tenprice,p[i].stargr);
+		}
+	}
+	fclose(fp);
+	printf("저장됨!")
+}
+
+void loadData(Product p[]){
+	FILE*fp;
+	fp=open("product.txt","rt");
+	if(fp==NULL){
+		printf("=>파일 없음\n");
+	return 0;	
+	}
+	for(; ; count++){
+	fscanf(fp,"%s %d %d %d %d",p[count].name, &p[count].weight, &p[count].price, &p[count].tenprice, &p[count].stargr);
+	if(feof(fp)) break;
+	}
+	fclose(fp);
+	printf("=> 로딩 성공!\n");
+
+	return count;
+}
+//void searchName(Product *s, int count);
+//void searchTenprice(Product *s, int count);
+//void searchPrice(Product *s, int count);
