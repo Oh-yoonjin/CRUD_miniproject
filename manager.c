@@ -83,7 +83,7 @@ int selectDataNo2(Product2 *p, int count){
 }
 
 	
-void saveData(Product p[], int count){
+void saveData(Product2 p[], int count){
 	FILE* fp;
 	fp= open("product.txt","wt");
 	for(int i=0; i<count; i++){
@@ -94,7 +94,7 @@ void saveData(Product p[], int count){
 	printf("저장됨!")
 }
 
-void loadData(Product p[]){
+void loadData(Product2 p[]){
 	FILE*fp;
 	fp=open("product.txt","rt");
 	if(fp==NULL){

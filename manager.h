@@ -15,9 +15,9 @@ int deleteProduct2(Product2 *p);
 int selectMenu2();
 void listProduct2(Product2 *p,int count);
 int selectDataNo2(Product2 *p, int count);
-void saveData(Product p[], int count);
-void loadData(Product p[]);
-void searchName(Product *s, int count);
-void searchTenprice(Product *s, int count);
-void searchPrice(Product *s, int count);
+void saveData(Product2 p[], int count);
+void loadData(Product2 p[]);
+void searchName(Product2 *s, int count);
+void searchTenprice(Product2 *s, int count);
+void searchPrice(Product2 *s, int count);
 	
