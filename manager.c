@@ -58,6 +58,8 @@ int menu;
     printf("2. 추가\n");
     printf("3. 수정\n");
     printf("4. 삭제\n");
+    printf("5. 데이터 저장\n");
+    printf("6. 제품명 검색\n");
     printf("0. 종료\n\n");
     printf("=> 원하는 메뉴는? ");
     scanf("%d", &menu);
@@ -92,7 +94,7 @@ void saveData(Product2 p[], int count){
 		fprintf(fp,"%d %d %d %d %s \n",p[i].weight,p[i].price,p[i].tenprice,p[i].stargr, p[i].name);
 		}
 	fclose(fp);
-	printf("저장됨!");
+	printf("저장됨!\n");
 }
 
 int loadData(Product2 p[]){
