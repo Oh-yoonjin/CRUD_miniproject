@@ -66,6 +66,20 @@ int main(void){
 		}
 		else searchName(slist,curcount);
 	}
+	else if (menu == 7){
+		if (curcount==0){
+			printf("파일이  없습니다!\n");
+			continue;
+		}
+		else searchPrice(slist,curcount);
+	}
+	else if (menu == 88888888){
+		if (curcount==0){
+			printf("파일이  없습니다!\n");
+			continue;
+		}
+		else searchTenprice(slist,curcount);
+	}
    }
 	printf("\n종료됨!\n");
    	return 0;

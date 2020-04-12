@@ -163,4 +163,27 @@ void searchTenprice(Product2 *p, int count){
 	if(scount == 0) printf("=> 검색된 데이터 없음! \n");
 	
 }
-//void searchPrice(Product *s, int count);
+void searchPrice(Product2 *p, int count){
+	int scount = 0;
+ 	int maxp=0;
+	int minp=0;
+
+	printf("최대 가격? ");
+	scanf("%d",&maxp);
+
+	printf("최소 가격? ");
+	scanf("%d",&minp);
+
+	printf("\nNo No Name  weight price tenprice stargrade\n");
+	printf("================================\n");
+	for(int i=0; i<count; i++){
+        if(p[i].price != -1){
+        	if(p[i].tenprice >= minp && p[i].tenprice <= maxp){
+                	printf("%2d",i+1);
+                	readProduct2(p[i]);
+                	scount++;
+           	 }
+        }
+   	}
+  	if(scount == 0) printf("=> 검색된 데이터 없음! \n");
+}
