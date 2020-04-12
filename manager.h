@@ -17,7 +17,7 @@ void listProduct2(Product2 *p,int count);
 int selectDataNo2(Product2 *p, int count);
 void saveData(Product2 p[], int count);
 int loadData(Product2 p[]);
-void searchName(Product2 *s, int count);
-void searchTenprice(Product2 *s, int count);
-void searchPrice(Product2 *s, int count);
+void searchName(Product2 *s, int count); //이름 검색 함수
+void searchTenprice(Product2 *s, int count);//표준 가격 검색 함수
+void searchPrice(Product2 *s, int count);// 가격대 검색 함수
 	
