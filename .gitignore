@@ -96,6 +96,8 @@ tags
 
 #objects files
 hello
+market
+*.txt
 /private/*
 
 # End of https://www.gitignore.io/api/c,vim,linux
