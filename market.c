@@ -73,7 +73,7 @@ int main(void){
 		}
 		else searchPrice(slist,curcount);
 	}
-	else if (menu == 88888888){
+	else if (menu == 8){
 		if (curcount==0){
 			printf("파일이  없습니다!\n");
 			continue;

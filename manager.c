@@ -60,6 +60,8 @@ int menu;
     printf("4. 삭제\n");
     printf("5. 데이터 저장\n");
     printf("6. 제품명 검색\n");
+    printf("7. 가격대 검색\n");
+    printf("8. 표준 가격 검색\n");
     printf("0. 종료\n\n");
     printf("=> 원하는 메뉴는? ");
     scanf("%d", &menu);
@@ -178,7 +180,7 @@ void searchPrice(Product2 *p, int count){
 	printf("================================\n");
 	for(int i=0; i<count; i++){
         if(p[i].price != -1){
-        	if(p[i].tenprice >= minp && p[i].tenprice <= maxp){
+        	if(p[i].price >= minp && p[i].price <= maxp){
                 	printf("%2d",i+1);
                 	readProduct2(p[i]);
                 	scount++;
