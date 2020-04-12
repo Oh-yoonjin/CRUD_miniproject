@@ -15,8 +15,10 @@ int main(void){
     while (1){
         menu = selectMenu2();
         if (menu == 0) break;
-        if(menu ==3 || menu == 4)
-            if (count==0) continue;
+        if(menu ==3 || menu == 4){	
+        	printf(" 데이터가 없습니다!\n");
+		if (count==0) continue;
+		}
         if (menu == 1){
 
             if (count > 0) listProduct2(slist,curcount); 
