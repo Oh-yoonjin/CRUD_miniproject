@@ -91,8 +91,10 @@ void saveData(Product2 p[], int count){
 	FILE* fp;
 	fp= fopen("product.txt","wt");
 	for(int i=0; i<count; i++){
+		if(p[i].price != -1){
 		fprintf(fp,"%d %d %d %d %s \n",p[i].weight,p[i].price,p[i].tenprice,p[i].stargr, p[i].name);
 		}
+	}
 	fclose(fp);
 	printf("저장됨!\n");
 }
@@ -136,5 +138,29 @@ void searchName(Product2 *p, int count){
 	if(scount == 0) printf("=> 검색된 데이터 없음! \n");
 
 }
-//void searchTenprice(Product *s, int count);
+void searchTenprice(Product2 *p, int count){
+	int scount = 0;
+	int max = 0;
+	int min = 0;
+
+	printf("최대 표준가격? ");
+	scanf("%d",&max);
+
+	printf("최소 표준가격? ");
+	scanf("%d",&min);
+
+	printf("\nNo No Name  weight price tenprice stargrade\n");
+	printf("================================\n");
+ 	for(int i=0; i<count; i++){
+		if(p[i].price != -1){
+			if(p[i].tenprice >= min && p[i].tenprice <= max){   
+				printf("%2d",i+1);
+               			readProduct2(p[i]);
+          			scount++;
+           		 }
+       		 }
+	}
+	if(scount == 0) printf("=> 검색된 데이터 없음! \n");
+	
+}
 //void searchPrice(Product *s, int count);

@@ -67,7 +67,7 @@ int main(void){
 		else searchName(slist,curcount);
 	}
    }
-	printf("종료됨!\n");
+	printf("\n종료됨!\n");
    	return 0;
 
 
