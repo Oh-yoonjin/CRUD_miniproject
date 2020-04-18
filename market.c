@@ -16,8 +16,10 @@ int main(void){
         menu = selectMenu2();
         if (menu == 0) break;
         if(menu ==3 || menu == 4){	
-        	printf(" 데이터가 없습니다!\n");
-		if (count==0) continue;
+		if (count==0){
+        		printf(" 데이터가 없습니다!\n");
+			continue;
+			}
 		}
         if (menu == 1){
 
