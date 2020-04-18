@@ -151,7 +151,7 @@ void searchTenprice(Product2 *p, int count){
 	printf("최소 표준가격? ");
 	scanf("%d",&min);
 
-	printf("\nNo No Name  weight price tenprice stargrade\n");
+	printf("\nNo Name  weight price tenprice stargrade\n");
 	printf("================================\n");
  	for(int i=0; i<count; i++){
 		if(p[i].price != -1){
@@ -176,7 +176,7 @@ void searchPrice(Product2 *p, int count){
 	printf("최소 가격? ");
 	scanf("%d",&minp);
 
-	printf("\nNo No Name  weight price tenprice stargrade\n");
+	printf("\nNo Name  weight price tenprice stargrade\n");
 	printf("================================\n");
 	for(int i=0; i<count; i++){
         if(p[i].price != -1){
